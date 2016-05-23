@@ -10,8 +10,10 @@ namespace Snake
     {
         static void Main()
         {
-
-            //Draw(x1, y1, char1);
+            Horizontal_Line hLine_Top = new Horizontal_Line(0, Console.WindowWidth-1, 0);
+            hLine_Top.Draw();
+            Vertical_Line vLine_Left = new Vertical_Line(0, Console.WindowHeight - 1, 0);
+            vLine_Left.Draw();
 
             Console.Read();
         }
