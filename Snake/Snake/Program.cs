@@ -10,12 +10,21 @@ namespace Snake
     {
         static void Main()
         {
-            Horizontal_Line hLine_Top = new Horizontal_Line(0, Console.WindowWidth-1, 0);
-            hLine_Top.Draw();
-            Vertical_Line vLine_Left = new Vertical_Line(0, Console.WindowHeight - 1, 0);
-            vLine_Left.Draw();
+            Console.SetBufferSize(120, 42);
+            Console.SetWindowSize(120, 45);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.BackgroundColor = ConsoleColor.Yellow;
 
+            Walls walls = new Walls();
+            
+
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            walls.Draw();
+            Console.SetCursorPosition(0, 0);
             Console.Read();
+            
         }
     }
 }
